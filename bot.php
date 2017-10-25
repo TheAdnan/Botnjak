@@ -1,7 +1,9 @@
 <?php 
 
+require "vendor/autoload.php";
 //require_once('path/to/twitteroauth.php');
 include 'credentials.php';
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 ini_set('memory_limit', '2048M');
  
