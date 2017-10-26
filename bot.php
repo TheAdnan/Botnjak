@@ -16,7 +16,7 @@ $connection = new TwitterOAuth($consumer_key, $consumer_secret, $access_key, $ac
 
 $query = array(
   'q' => 'bosanac OR bosanci OR bosancu OR bosanca OR bosancima',
-  'count' => '5',
+  'count' => '10',
   'result_type' => 'recent'
 );
   
@@ -32,7 +32,7 @@ foreach ($results->statuses as $result) {
    $tweetID = $result->id_str;
    echo "<br>";
    //Reply to tweet
-   $response = $connection->post('statuses/update' , array('status' => $reply ));
+   $response = $connection->post('statuses/update' , array('status' => $reply, 'in_reply_to_status_id' => $result->id_str));
 }
 
 ?>
