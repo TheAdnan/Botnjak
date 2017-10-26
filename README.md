@@ -4,4 +4,4 @@ __Botnjak__ is a twitter bot that will search for the word "bosanac" in any twee
 
 ![avatar](https://github.com/TheAdnan/Botnjak/blob/master/avatar.png?raw=true)
 
-Follow him here, until I find him a nice place to be hosted: [Botnjak](https://twitter.com/botnjak)
+Follow [this account](https://twitter.com/botnjak), and I hope he'll soon be up and running doing what he has to.
