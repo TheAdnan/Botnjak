@@ -27,10 +27,8 @@ foreach ($results->statuses as $result) {
    $newtweet = "bošnjak*";
    $replyuser = "@" . $user ;
    $reply = "$replyuser  $newtweet";
-   echo "<br>";
    echo $reply  . "\n";
    $tweetID = $result->id_str;
-   echo "<br>";
    //Reply to tweet
    $response = $connection->post('statuses/update' , array('status' => $reply, 'in_reply_to_status_id' => $result->id_str));
 }
