@@ -1,22 +1,23 @@
 <?php 
 
 require "vendor/autoload.php";
-//require_once('path/to/twitteroauth.php');
 include 'credentials.php';
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 ini_set('memory_limit', '2048M');
  
-$connection = new TwitterOAuth($consumer_key, $consumer_secret, $access_key, $access_secret);
 
 function search(array $query){
 	global $connection;
 	return $connection->get('search/tweets', $query);
 }
 
+$connection = new TwitterOAuth($consumer_key, $consumer_secret, $access_key, $access_secret);
+
 $query = array(
   'q' => 'bosanac OR bosanci OR bosancu OR bosanca OR bosancima',
-  'lang' => 'bs', 
+  'count' => '5',
+  'result_type' => 'recent'
 );
   
 $results = search($query);
