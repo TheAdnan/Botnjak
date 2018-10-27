@@ -21,7 +21,7 @@ function search(array $query){
 $connection = new TwitterOAuth($consumer_key, $consumer_secret, $access_key, $access_secret);
 
 $query = array(
-  'q' => 'bosanac OR bosanci OR bosancu OR bosanca OR bosancima OR bosance',
+  'q' => 'bosanac OR bosanci OR bosancu OR bosanca OR bosanaca  OR bosancima OR bosance',
   'count' => '20',
   'result_type' => 'recent'
 );
